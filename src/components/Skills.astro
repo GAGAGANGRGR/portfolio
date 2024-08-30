@@ -1,0 +1,85 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Full Stack</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Java</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>JDBC</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Spring Boot</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Python</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Html & css</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>JavaScript</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Angular</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>Vue</h2>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<h2>MySQL</h2>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		grid-template-columns: repeat(5, 1fr); /* Adjust to fit the content */
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 2.5rem;
+			/* padding: 2.5rem; */
+			padding-left: 5.5rem;
+			padding-right: 3.5rem;
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr); /* Changed to 5 columns */
+			gap: 2rem;
+		}
+		.stack:first-child {
+			margin-bottom: 2rem; /* Adds gap between the 1st and 2nd lines */
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+			font-weight: 200;
+		}
+	}
+</style>

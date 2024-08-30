@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Gagan" description="About Gagan Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Gagan at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Hi there! 👋 I'm Gagan.
+					</p>
+					<p>
+						I'm a software engineer, currently working at Digital API Craft in Bangalore as a Associate Software Engineer.
+I have experience working has Full Stack Development.
+					</p>
+					<p>
+						I am a skilled professional with proficient knowledge in Java programming, specializing in Object-Oriented Programming (OOPs) and Data Structures & Algorithms (DSA). I also have expertise in JDBC, Spring Boot, and Microservices. Additionally, I possess basic knowledge of JavaScript, AngularJS, NodeJS, Vue.js, Nuxt.js, HTML, and CSS.
+					</p>
+					<p>
+						During my Software Engineering career, I have worked with multiple programming languages, libraries, frameworks and technologies such as Java, JDBC, Spring, Python, JavaScript,  and MySQL. 
+					</p>
+					<p>
+						My interests encompass software development, and I'm always eager to explore new technological horizons.
+					</p>
+					<p>
+						On a personal level, I'm passionate about self-improvement and personal growth.
+						<p>
+							I believe that we can always learn and grow, both professionally and personally. 
+						</p>
+					</p>
+					<p>
+						I hope you have a lovely day!
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>BE CSE</p>
+					<p>Dayananda Sagar University.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Java, JDBC, Spring, Python, JavaScript, AngularJS  and MySQL</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
